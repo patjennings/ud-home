@@ -273,7 +273,6 @@ html, body{
 }
 
 #numeros{
-
 	.wrapper{
 		.block{
 			text-align: center;
@@ -292,8 +291,6 @@ html, body{
 			}
 		}
 	}
-
-
 }
 
 @media screen and (min-width: $break-small) and (max-width: $break-medium) {
@@ -349,6 +346,15 @@ html, body{
 				.wrapper{
 					background: none;
 
+				}
+			}
+			#numeros{
+				.wrapper{
+					.block{
+						.phone_number{
+							font-size: $baseRem*2;
+						}
+					}
 				}
 			}
 		}
