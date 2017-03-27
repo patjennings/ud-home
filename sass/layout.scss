@@ -29,8 +29,14 @@ html, body{
 	color: #FFF;
 }
 .ct-blue{
+
+
 	background: #020285;
 	color: #FFF;
+
+	.container-inner{
+		background: url(../assets/illustration_agence.png) no-repeat 100% 0;
+	}
 }
 .ct-lightblue{
 	background: #5151A9;
@@ -187,11 +193,28 @@ html, body{
 		.height-1{
 			.project{
 				height: 320px;
+
+				.project-logo{
+					margin-top: 192px;
+				}
 			}
 		}
 		.height-2{
 			.project{
+				height: 480px;
+
+				.project-logo{
+					margin-top: 352px;
+				}
+			}
+		}
+		.height-3{
+			.project{
 				height: 672px;
+
+				.project-logo{
+					margin-top: 544px;
+				}
 			}
 		}
 
@@ -213,6 +236,8 @@ html, body{
 			}
 		}
 
+
+
 		.project{
 			background: #FC0;
 			width: 100%;
@@ -220,13 +245,25 @@ html, body{
 			color: #FFF;
 
 
+
+
 			.project-logo{
-				margin-top: 192px;
 				margin-left: 32px;
+				margin-bottom: 16px;
+				height: 24px;
+				overflow: hidden;
 			}
 			.project-title{
 				margin-left: 32px;
+				margin-right: 32px;
 			}
+		}
+
+		#mdp{
+			color: #26509A;
+		}
+		#metrolab{
+			color: #094160;
 		}
 	}
 }
@@ -239,8 +276,9 @@ html, body{
 
 }
 #caravel{
+
 	.wrapper{
-		background: url(../files/screenshot_caravel.png) -256px -28px;
+		background: url(../files/screenshot_caravel.png) no-repeat left -24px;
 		padding-bottom: $vRhythm*3;
 		.block{
 
@@ -249,7 +287,6 @@ html, body{
 }
 #contact{
 	.wrapper{
-		background: url(../assets/illustration_agence.png) no-repeat;
 		padding-bottom: $vRhythm*3;
 
 		.block{
@@ -267,6 +304,7 @@ html, body{
 	.pic{
 		width: 96px;
 		height: 96px;
+
 		background-color: #020285;
 		background-blend-mode: screen;
 	}
@@ -296,9 +334,15 @@ html, body{
 @media screen and (min-width: $break-small) and (max-width: $break-medium) {
 
 	body{
-		// background: yellow;
+	// background: yellow;
 		width: 100%;
 		// overflow: hidden;
+	}
+
+	.ct-blue{
+		.container-inner{
+			background: none;
+		}
 	}
 
 	.container{
@@ -357,10 +401,55 @@ html, body{
 					}
 				}
 			}
+			#caravel{
+
+				.wrapper{
+					background: url(../files/screenshot_caravel.png) no-repeat left bottom;
+					padding-bottom: $vRhythm*24;
+					.block{
+
+					}
+				}
+			}
 		}
 	}
 }
-@media screen and (min-width: $break-medium) and (max-width: $break-large) {
+@media screen and (min-width: $break-medium) and (max-width: $break-mediumlarge) {
+
+	.ct-blue{
+		.container-inner{
+			background: none;
+		}
+	}
+	#caravel{
+
+		.wrapper{
+			background: url(../files/screenshot_caravel.png) no-repeat left bottom;
+			padding-bottom: $vRhythm*24;
+			.block{
+
+			}
+		}
+	}
+
+	.container{
+		.container-inner{
+			width: 90%;
+			// padding-left: $vRhythm;
+			// padding-right: $vRhythm;
+
+			.col-3, .col-4, .col-6, .col-8, .col-12{
+				width: 100%;
+			}
+			.span-3, .span-4, .span-6, .span-8{
+				margin-left: 0;
+			}
+
+
+		}
+	}
+}
+@media screen and (min-width: $break-mediumlarge) and (max-width: $break-large) {
 
 	 body{
 		//  background: green;
@@ -370,16 +459,45 @@ html, body{
 	$column: 6%;
 	$gutter: 2.56%;
 
+	.span-3{
+		margin-left: ($column*3)+($gutter*2);
+	}
+	.span-4{
+		margin-left: ($column*4)+($gutter*3);
+	}
+	.span-6{
+		margin-left: ($column*6)+($gutter*5);
+	}
+	.span-8{
+		margin-left: ($column*8)+($gutter*7);
+	}
+	// Colonnes
+	.col-3{
+		width: ($column*3)+($gutter*2);
+	}
+	.col-4{
+		width: ($column*4)+($gutter*3);
+	}
+	.col-6{
+		width: ($column*6)+($gutter*5);
+	}
+	.col-8{
+		width: ($column*8)+($gutter*7);
+	}
+	.col-12{
+		width: ($column*12)+($gutter*11);
+	}
+
 	.container{
 		.container-inner{
 			padding-left: $vRhythm;
- 		 padding-right: $vRhythm;
+ 		  padding-right: $vRhythm;
 			width: ($column*12)+($gutter*11);
 		}
 	}
 }
 
-@media screen and (min-width: $break-large) {
+@media screen and (min-width: $break-large) and (max-width: 1920px) {
 
 	 body{
 		//  background: blue;
@@ -391,6 +509,28 @@ html, body{
 		}
 	}
 }
+
+@media screen and (min-width: 1920px) {
+
+	 body{
+		//  background: blue;
+
+	 }
+
+	.container{
+		.container-inner{
+			width: ($column*12)+($gutter*11);
+		}
+	}
+}
+
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
 @media print {
 	body{
 

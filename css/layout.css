@@ -20,6 +20,8 @@ html, body {
 .ct-blue {
   background: #020285;
   color: #FFF; }
+  .ct-blue .container-inner {
+    background: url(../assets/illustration_agence.png) no-repeat 100% 0; }
 
 .ct-lightblue {
   background: #5151A9;
@@ -135,8 +137,16 @@ html, body {
       margin-right: 30px; }
     #projects .multi-column .height-1 .project {
       height: 320px; }
+      #projects .multi-column .height-1 .project .project-logo {
+        margin-top: 192px; }
     #projects .multi-column .height-2 .project {
+      height: 480px; }
+      #projects .multi-column .height-2 .project .project-logo {
+        margin-top: 352px; }
+    #projects .multi-column .height-3 .project {
       height: 672px; }
+      #projects .multi-column .height-3 .project .project-logo {
+        margin-top: 544px; }
     #projects .multi-column .sentence {
       margin-bottom: 30px;
       color: #FFF;
@@ -154,10 +164,17 @@ html, body {
       margin-bottom: 30px;
       color: #FFF; }
       #projects .multi-column .project .project-logo {
-        margin-top: 192px;
-        margin-left: 32px; }
+        margin-left: 32px;
+        margin-bottom: 16px;
+        height: 24px;
+        overflow: hidden; }
       #projects .multi-column .project .project-title {
-        margin-left: 32px; }
+        margin-left: 32px;
+        margin-right: 32px; }
+    #projects .multi-column #mdp {
+      color: #26509A; }
+    #projects .multi-column #metrolab {
+      color: #094160; }
 
 #partners {
   padding-bottom: 3rem; }
@@ -165,11 +182,10 @@ html, body {
     color: #1ACC58; }
 
 #caravel .wrapper {
-  background: url(../files/screenshot_caravel.png) -256px -28px;
+  background: url(../files/screenshot_caravel.png) no-repeat left -24px;
   padding-bottom: 3rem; }
 
 #contact .wrapper {
-  background: url(../assets/illustration_agence.png) no-repeat;
   padding-bottom: 3rem; }
 
 #people {
@@ -198,6 +214,9 @@ html, body {
   body {
     width: 100%; }
 
+  .ct-blue .container-inner {
+    background: none; }
+
   .container .container-inner {
     width: 90%; }
     .container .container-inner .col-3, .container .container-inner .col-4, .container .container-inner .col-6, .container .container-inner .col-8, .container .container-inner .col-12 {
@@ -222,14 +241,73 @@ html, body {
     .container .container-inner #contact .wrapper {
       background: none; }
     .container .container-inner #numeros .wrapper .block .phone_number {
-      font-size: 2rem; } }
-@media screen and (min-width: 640px) and (max-width: 1170px) {
+      font-size: 2rem; }
+    .container .container-inner #caravel .wrapper {
+      background: url(../files/screenshot_caravel.png) no-repeat left bottom;
+      padding-bottom: 24rem; } }
+@media screen and (min-width: 640px) and (max-width: 960px) {
+  .ct-blue .container-inner {
+    background: none; }
+
+  #caravel .wrapper {
+    background: url(../files/screenshot_caravel.png) no-repeat left bottom;
+    padding-bottom: 24rem; }
+
+  .container .container-inner {
+    width: 90%; }
+    .container .container-inner .col-3, .container .container-inner .col-4, .container .container-inner .col-6, .container .container-inner .col-8, .container .container-inner .col-12 {
+      width: 100%; }
+    .container .container-inner .span-3, .container .container-inner .span-4, .container .container-inner .span-6, .container .container-inner .span-8 {
+      margin-left: 0; } }
+@media screen and (min-width: 960px) and (max-width: 1170px) {
+  .span-3 {
+    margin-left: 23.12%; }
+
+  .span-4 {
+    margin-left: 31.68%; }
+
+  .span-6 {
+    margin-left: 48.8%; }
+
+  .span-8 {
+    margin-left: 65.92%; }
+
+  .col-3 {
+    width: 23.12%; }
+
+  .col-4 {
+    width: 31.68%; }
+
+  .col-6 {
+    width: 48.8%; }
+
+  .col-8 {
+    width: 65.92%; }
+
+  .col-12 {
+    width: 100.16%; }
+
   .container .container-inner {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100.16%; } }
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1170px) and (max-width: 1920px) {
   .container .container-inner {
     width: 1170px; } }
+@media screen and (min-width: 1920px) {
+  .container .container-inner {
+    width: 1170px; } }
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */ }
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */ }
 
 /*# sourceMappingURL=layout.css.map */
